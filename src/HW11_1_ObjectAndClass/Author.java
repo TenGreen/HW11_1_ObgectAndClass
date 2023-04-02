@@ -1,8 +1,8 @@
 package HW11_1_ObjectAndClass;
 
 public class Author {
-    String authorsName;
-    String lastNameAuthor;
+    private String authorsName;
+    private String lastNameAuthor;
 
     public Author(String authorsName, String lastNameAuthor) {
         this.authorsName = authorsName;
@@ -17,11 +17,11 @@ public class Author {
         return this.lastNameAuthor;
     }
 
-    public void setAuthorsName(String authorsName) {
-        this.authorsName = authorsName;
-    }
+    //public void setAuthorsName(String authorsName) {
+    //    this.authorsName = authorsName;
+    //}
 
-    public void setLastNameAuthor(String lastNameAuthor) {
-        this.lastNameAuthor = lastNameAuthor;
-    }
+    //public void setLastNameAuthor(String lastNameAuthor) {
+    //    this.lastNameAuthor = lastNameAuthor;
+    //}
 }

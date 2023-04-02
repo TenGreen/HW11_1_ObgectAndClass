@@ -1,12 +1,7 @@
 package HW11_1_ObjectAndClass;
-
-
 import java.util.Scanner;
 
 public class ChangeData {
-
-
-
     public static void changeYearOfPublication(Book book) {
         Scanner scanner = new Scanner(System.in);
         int newYearOfPublication;

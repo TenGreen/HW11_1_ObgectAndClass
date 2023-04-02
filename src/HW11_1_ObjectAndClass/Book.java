@@ -1,9 +1,9 @@
 package HW11_1_ObjectAndClass;
 
 public class Book {
-    String name;
-    Author author;
-    int yearOfPublication;
+    private String name;
+    private Author author;
+    private int yearOfPublication;
 
     public Book(String name, Author author, int yearOfPublication) {
         this.name = name;
@@ -15,21 +15,21 @@ public class Book {
         return this.name;
     }
 
-    public Author getAuthor() {
-        return this.author;
-    }
+    // public Author getAuthor() {
+    //   return this.author;
+    //}
 
     public int getYearOfPublication() {
         return this.yearOfPublication;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    //public void setName(String name) {
+    //  this.name = name;
+    //}
 
-    public void setAuthor(Author author) {
-        this.author = author;
-    }
+    //public void setAuthor(Author author) {
+    //  this.author = author;
+    //}
 
     public void setYearOfPublication(int yearOfPublication) {
         this.yearOfPublication = yearOfPublication;
