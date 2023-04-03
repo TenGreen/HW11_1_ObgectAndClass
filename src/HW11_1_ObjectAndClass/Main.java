@@ -8,11 +8,14 @@ public class Main {
         Book tom1 = new Book("Том первый", ivanov, 2020);
         Book tom2 = new Book("Том 2", petrov, 2021);
 
-        PrintKatalog.printAuthorsHeading();
-        PrintKatalog.printAuthors(ivanov);
-        PrintKatalog.printAuthors(petrov);
+        //PrintKatalog.printAuthorsHeading();
+        //PrintKatalog.printAuthors(ivanov);
+        //PrintKatalog.printAuthors(petrov);
+        System.out.println(ivanov);
+        System.out.println(tom1);
 
-        ChangeData.changeYearOfPublication(tom1);
+
+        //ChangeData.changeYearOfPublication(tom1);
 
     }
 }

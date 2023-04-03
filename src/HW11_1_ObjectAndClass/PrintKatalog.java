@@ -10,4 +10,8 @@ public class PrintKatalog {
         System.out.println("Фамилия "+ author.getLastNameAuthor() + ", имя " + author.getAuthorsName());
     }
 
+    public static void printAll(Author author) {
+        System.out.println(Author.class.toString());
+    }
+
 }
