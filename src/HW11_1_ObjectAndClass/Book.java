@@ -46,9 +46,13 @@ public class Book {
                 '}';
     }
 
+
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return yearOfPublication == book.yearOfPublication && name.equals(book.name) && author.equals(book.author);
     }
 
     @Override
