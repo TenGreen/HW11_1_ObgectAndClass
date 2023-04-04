@@ -1,5 +1,7 @@
 package HW11_1_ObjectAndClass;
 
+import java.util.Objects;
+
 public class Author {
     private String authorsName;
     private String lastNameAuthor;
@@ -27,27 +29,22 @@ public class Author {
 
     @Override
     public String toString() {
-        return "Фамилия " + getLastNameAuthor() + ", имя " + getAuthorsName();
+        return "Author{" +
+                "authorsName='" + authorsName + '\'' +
+                ", lastNameAuthor='" + lastNameAuthor + '\'' +
+                '}';
     }
 
     @Override
-    public boolean equals(Object autor2) {
-        if (autor2 == this) {
-            return true;
-        }
-        if (autor2 == null || autor2.getClass() != this.getClass()) {
-            return false;
-        }
-        Author guest = (Author) autor2;
-        return  (authorsName != null && authorsName.equals(guest.getAuthorsName()))
-            || (lastNameAuthor != null && lastNameAuthor.equals(guest.getAuthorsName()));
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return Objects.equals(authorsName, author.authorsName) && Objects.equals(lastNameAuthor, author.lastNameAuthor);
     }
 
     @Override
     public int hashCode() {
-        return this.hashCode();
+        return Objects.hash(authorsName, lastNameAuthor);
     }
-
-
-    /*Реализовать методы toString, equals и hashCode в классах Author и Book*/
 }

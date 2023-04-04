@@ -1,5 +1,7 @@
 package HW11_1_ObjectAndClass;
 
+import java.util.Objects;
+
 public class Book {
     private String name;
     private Author author;
@@ -16,7 +18,7 @@ public class Book {
     }
 
     public Author getAuthor() {
-       return this.author;
+        return this.author;
     }
 
     public int getYearOfPublication() {
@@ -24,11 +26,11 @@ public class Book {
     }
 
     public void setName(String name) {
-      this.name = name;
+        this.name = name;
     }
 
     public void setAuthor(Author author) {
-      this.author = author;
+        this.author = author;
     }
 
     public void setYearOfPublication(int yearOfPublication) {
@@ -37,27 +39,20 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Название: " + this.name + " Автор: " + author.toString() + " Год издания: " + this.yearOfPublication;
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", author=" + author +
+                ", yearOfPublication=" + yearOfPublication +
+                '}';
     }
 
     @Override
-    public boolean equals(Object book2) {
-        if (book2 == this) {
-            return true;
-        }
-        if (book2 == null || book2.getClass() != this.getClass()) {
-            return false;
-        }
-        Book guest = (Book) book2;
-        return ((name != null && name.equals(guest.getName())) && (author != null && author.equals(guest.getAuthor()))
-                && (yearOfPublication != 0 && yearOfPublication == guest.yearOfPublication));
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 
     @Override
     public int hashCode() {
-        return this.hashCode();
+        return Objects.hash(name, author, yearOfPublication);
     }
-
-
-    /*Реализовать методы toString, equals и hashCode в классах Author и Book*/
 }
